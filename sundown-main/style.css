@@ -20,17 +20,24 @@
     padding: 0;
     box-sizing: border-box;
     font-family: neu;
+    /* overflow-x: auto; */
+
 }
 
 html, body {
     height: 100%;
     width: 100%;
+    margin: 0px;
+    padding: 0px;
+    /* overflow-wrap: ; */
 }
 
 #main {
     /* background-color: #000; */
     position: relative;
     z-index: 10;
+    overflow: auto;
+    overflow-x: hidden;
 }
 
 #page1 {
@@ -120,7 +127,8 @@ nav h3 {
 }
 
 #center h1 {
-    font-size: 10vw;
+    /* line-height: 0vw; */
+    font-size: 8vw;
     text-align: right;
     line-height: 8vw;
 }
@@ -135,10 +143,19 @@ nav h3 {
 #hero-shape {
     position: absolute;
     width: 46vw;
-    height: 36vw;
+    height: 0vw;
     right: 0;
     top: 65vh;
 }
+
+#hero-shape1{
+    position: absolute;
+    width: 40vw;
+    height: 0vw;
+    right: -20;
+    top: 20vh;
+}
+
 
 #hero-1 {
     background-color: #FE320A;
@@ -153,7 +170,7 @@ nav h3 {
 #hero-2 {
     background: linear-gradient(#FE320A, #fe3f0a);
 
-    height: 30vw;
+    height: 20vw;
     width: 30vw;
     border-radius: 50%;
     position: absolute;
@@ -167,7 +184,7 @@ nav h3 {
 
 #hero-3 {
     background: linear-gradient(#FE320A, #fe3f0a);
-    height: 30vw;
+    height: 20vw;
     position: absolute;
     width: 30vw;
     border-radius: 50%;
@@ -414,11 +431,11 @@ nav h3 {
 }
 
 #footer h1 {
-    font-size: 23vw;
+    font-size: 19vw;
 }
 
 #footer-div {
-    height: 20vh;
+    height: 18vh;
     width: 100%;
     background-color: red;
 }
@@ -670,4 +687,44 @@ nav h3 {
         font-size: 9vw;
       
     }
+}
+
+
+
+.logo-container {
+    position: relative;
+    display: flex;
+    background-color: #EFEAE3 ;
+    background: transparent; /* Light background similar to the image */
+    padding: 20px;
+}
+
+/* Styling for the red circle */
+.logo-circle {
+    position: absolute;
+    right: 0;
+    top: 20px;
+    width: 70px; /* Adjust to fit your needs */
+    height: 70px;
+    background-color: #ff3c00; /* Bright red color */
+    border-radius: 50%;
+    z-index: -1; /* Place behind the text */
+}
+
+/* "Sundown" text style */
+.logo-sundown {
+    font-family: Arial, sans-serif;
+    font-size: 50px;
+    color: #ff4500; /* Orange red color */
+    font-weight: normal;
+    margin: 0;
+}
+
+/* "Studio" text style */
+.logo-studio {
+    font-family: Arial, sans-serif;
+    font-size: 50px;
+    color: #1a1a1a; /* Black color */
+    font-weight: bold;
+    margin: 0;
 }
